@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Регистрация"
+        android:fontFamily="@font/century_gothic"
+        android:textSize="12pt"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/RegETSurName"/>
+
+    <EditText
+        android:id="@+id/RegETSurName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="20dp"
+        android:hint="Фамилия"
+        android:textSize="8pt"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/white"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/RegETFirstName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/RegETFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="20dp"
+        android:hint="Имя"
+        android:textSize="8pt"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/white"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/RegETMiddleName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/RegETMiddleName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="20dp"
+        android:hint="Отчество"
+        android:layout_marginBottom="40dp"
+        android:textSize="8pt"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <EditText
+        android:id="@+id/RegETEmail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="20dp"
+        android:hint="E-mail"
+        android:textSize="8pt"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/white"
+        app:layout_constraintTop_toBottomOf="@id/RegETMiddleName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/RegETPassword"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="20dp"
+        android:hint="Пароль"
+        android:textSize="8pt"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="50dp"
+        android:background="@drawable/white"
+        app:layout_constraintTop_toBottomOf="@id/RegETEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/RegBtnReg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/black"
+        android:textColor="@color/defaultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/RegETPassword">
+        <TextView
+            android:id="@+id/RegTVReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginVertical="0dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/century_gothic"
+            android:text="Зарегистрироваться"
+            android:textColor="@color/white"
+            android:textSize="8pt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Уже есть аккаунт?"
+        android:textSize="12dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/RegBtnToAuth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/RegBtnToAuth"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/white"
+        android:textColor="@color/defaultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/RegTVToAuth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginVertical="0dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/century_gothic"
+            android:text="Войти"
+            android:textColor="@color/defaultText"
+            android:textSize="8pt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
