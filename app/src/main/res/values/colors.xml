@@ -10,4 +10,5 @@
     <color name="main_blue">#D7F7F7</color>
     <color name="deep_blue">#3498db</color>
     <color name="defaultText">#818181</color>
+    <color name="locationShow">#A65EA8</color>
 </resources>

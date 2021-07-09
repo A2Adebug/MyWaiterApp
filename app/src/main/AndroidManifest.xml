@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyWaiterApp">
-        <activity android:name=".Authorization"></activity>
+        <activity android:name=".Advert"></activity>
+        <activity android:name=".Authorization" />
         <activity android:name=".Registration">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

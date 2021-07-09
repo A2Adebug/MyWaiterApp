@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Advert">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/white"
+        android:textColor="@color/defaultText"
+        app:layout_constraintBottom_toTopOf="@id/AdvertBtnWrite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/AdvertTVDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="start"
+            android:fontFamily="@font/century_gothic"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:text="12:00 - 22:00 | 21.09.2021"/>
+
+        <TextView
+            android:id="@+id/AdvertTVName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/AdvertTVDateTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="start"
+            android:fontFamily="@font/century_gothic_bold"
+            android:textSize="25dp"
+            android:layout_marginTop="15dp"
+            android:paddingStart="20dp"
+            android:text="Свадебный банкет"/>
+
+        <TextView
+            android:id="@+id/AdvertTVLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/AdvertTVName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="start"
+            android:fontFamily="@font/century_gothic"
+            android:textSize="18dp"
+            android:paddingStart="20dp"
+            android:text="Москва, ул. Щукина 7"/>
+
+        <TextView
+            android:id="@+id/AdvertTVLocationShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/AdvertTVLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/locationShow"
+            android:gravity="start"
+            android:fontFamily="@font/century_gothic"
+            android:textSize="15dp"
+            android:paddingStart="20dp"
+            android:text="Показать на карте"/>
+
+        <TextView
+            android:id="@+id/AdvertTVPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/AdvertTVLocationShow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="start"
+            android:fontFamily="@font/century_gothic"
+            android:textSize="25dp"
+            android:paddingStart="18dp"
+            android:text="3000₽"/>
+
+        <TextView
+            android:id="@+id/AdvertTVDesctext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/AdvertTVPay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            android:gravity="start"
+            android:fontFamily="@font/century_gothic"
+            android:textSize="20dp"
+            android:paddingStart="18dp"
+            android:text="Описание"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/AdvertRVDesc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/AdvertTVDesctext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/Contact"
+            />
+        
+<!--        <TextView-->
+<!--            android:id="@+id/AdvertTVDesc"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/AdvertTVDesctext"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:gravity="start"-->
+<!--            android:fontFamily="@font/century_gothic"-->
+<!--            android:textSize="18dp"-->
+<!--            android:paddingStart="18dp"-->
+<!--            android:orientation="vertical"-->
+<!--            android:text="Требуется официант на выпускной банкет. Отель 'Президент'. Облив, обнос, форма строго классика, не джинсы и сапоги. Очень хочу видеть классных ребят, спасибо всем большое. Не знаю на самом деле что здесь ещё можно писать, просто нужно как - то заполнить пространство текстом. Путин вор. \n \nПунктики какие - то типа:-->
+<!--            \n1. Парабола-->
+<!--            \n2. Михаил-->
+<!--            \n3. Судороги-->
+<!--            \n4. Абэмэ"/>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Contact"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/white"
+            android:textColor="@color/defaultText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/AdvertIVContact"
+                android:src="@drawable/ic_event"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/AdvertTVContactFIO"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/AdvertIVContact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Власьев Андрей Сергеевич"
+                android:textSize="8pt"
+                android:gravity="start"
+                android:paddingStart="10dp"
+                android:layout_marginBottom="20dp"
+                />
+            <TextView
+                android:id="@+id/AdvertTVContact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/AdvertIVContact"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="Частное лицо"
+                android:textSize="6pt"
+                android:gravity="start"
+                android:paddingStart="10dp"
+                android:layout_marginTop="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/AdvertBtnWrite"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/black"
+        android:textColor="@color/defaultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/AdvertTVWrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginVertical="0dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/century_gothic"
+            android:text="Написать"
+            android:textColor="@color/white"
+            android:textSize="8pt"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/AdvertTVNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Объявление №3632427"
+        android:fontFamily="@font/century_gothic"
+        android:textSize="10pt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
