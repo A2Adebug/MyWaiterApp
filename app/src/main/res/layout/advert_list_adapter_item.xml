@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/advert_list_item_background">
+
+    <TextView
+        android:id="@+id/AdListTVType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/century_gothic"
+        android:text="Банкет"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/AdListTVDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/century_gothic"
+        android:text="12:00 - 23:00|21.09.2021"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/AdListTVName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/century_gothic_bold"
+        android:text="Праздник будет короче"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/AdListTVType"
+        app:layout_constraintTop_toBottomOf="@+id/AdListTVType" />
+
+    <TextView
+        android:id="@+id/AdListTVReward"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/century_gothic"
+        android:text="3000₽"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/AdListTVName"
+        app:layout_constraintStart_toStartOf="@+id/AdListTVName"
+        app:layout_constraintTop_toBottomOf="@+id/AdListTVName" />
+
+    <TextView
+        android:id="@+id/AdListTVAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/century_gothic"
+        android:text="Москва, ул. Щучкина 7"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/AdListTVReward"
+        app:layout_constraintStart_toStartOf="@+id/AdListTVReward"
+        app:layout_constraintTop_toBottomOf="@+id/AdListTVReward" />
+
+    <TextView
+        android:id="@+id/AdListTVDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/century_gothic"
+        android:text="Требуется официант на праздничный банкет. Отель &quot;Президент&quot;. Облив, обнос, форма строго классика, не джинсы и сапоги. Очень хочу видеть классных ребят, спасибо всем большое. Не знаю на самом деле что..."
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/AdListTVAddress"
+        app:layout_constraintStart_toStartOf="@+id/AdListTVAddress"
+        app:layout_constraintTop_toBottomOf="@+id/AdListTVAddress" />
+</androidx.constraintlayout.widget.ConstraintLayout>
