@@ -22,9 +22,11 @@ class AdvertList : AppCompatActivity() {
             .addOnSuccessListener { result ->
                 // да, я говнишка, и вложил мапу в лист, чтобы не париться
                 val dataSet: MutableList<MutableMap<String, String>> = arrayListOf()
-                val i = 0
                 for (advert in result) {
-                    dataSet.add(advert.data as MutableMap<String, String>)
+                    val data = advert.data
+                    // короче надо заменить id, тупа патаму чта лень менять в файерсторе, убери эту строку потом плез !!!!!!!!!!
+                    data["id"] = advert.id
+                    dataSet.add(data as MutableMap<String, String>)
                 }
 
                 val adapter = AdvertListAdapter(dataSet)
@@ -32,7 +34,7 @@ class AdvertList : AppCompatActivity() {
                 adListRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
                 adListRecyclerView.adapter = adapter
                 adapter.notifyDataSetChanged()
-//                Log.d("Barmaley", dataSet.toString())
+                Log.d("Barmaley", dataSet.toString())
             }
     }
 }

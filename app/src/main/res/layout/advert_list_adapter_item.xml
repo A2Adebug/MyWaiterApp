@@ -7,6 +7,15 @@
     android:background="@drawable/advert_list_item_background">
 
     <TextView
+        android:id="@+id/AdListTVId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
         android:id="@+id/AdListTVType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,6 +82,8 @@
         android:fontFamily="@font/century_gothic"
         android:text="Требуется официант на праздничный банкет. Отель &quot;Президент&quot;. Облив, обнос, форма строго классика, не джинсы и сапоги. Очень хочу видеть классных ребят, спасибо всем большое. Не знаю на самом деле что..."
         android:textSize="16sp"
+        android:ellipsize="end"
+        android:maxLines="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/AdListTVAddress"
         app:layout_constraintStart_toStartOf="@+id/AdListTVAddress"
