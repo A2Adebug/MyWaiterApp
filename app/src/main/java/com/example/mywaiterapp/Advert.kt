@@ -15,14 +15,15 @@ class Advert : AppCompatActivity() {
 
         val id = intent.getStringExtra("id").toString()
 
-        FirebaseFirestore.getInstance().collection("events").document(id).get()
+        FirebaseFirestore.getInstance().collection("adverts").document(id).get()
             .addOnSuccessListener { result ->
                 val dateTime = result["time"].toString() + "|" + result["date"].toString()
                 AdvertTVDateTime.text = dateTime
                 AdvertTVName.text = result["name"].toString()
-                AdvertTVLocation.text = result["address"].toString()
-                AdvertTVPay.text = result["reward"].toString()
-                AdvertTVDesc.text = result["description"].toString().replace("\\n", System.getProperty("line.separator") as String)
+                AdvertTVLocation.text = result["loc"].toString()
+                val reward = result["pay"].toString() + "₽"
+                AdvertTVPay.text = reward
+                AdvertTVDesc.text = result["desc"].toString().replace("\\n", System.getProperty("line.separator") as String)
             }
 
 //        val linearLayoutManager = LinearLayoutManager(applicationContext)

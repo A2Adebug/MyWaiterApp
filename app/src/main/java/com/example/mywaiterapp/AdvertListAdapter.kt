@@ -54,12 +54,12 @@ class AdvertListAdapter(private val dataSet:MutableList<MutableMap<String, Strin
         viewHolder.tvDate.text = date
 
         viewHolder.tvName.text = dataSet[position]["name"]
-        val reward = dataSet[position]["reward"] + "₽"
+        val reward = dataSet[position]["pay"] + "₽"
         viewHolder.tvReward.text = reward
 
-        viewHolder.tvAddress.text = dataSet[position]["address"]
+        viewHolder.tvAddress.text = dataSet[position]["loc"]
 
-        viewHolder.tvDesc.text = dataSet[position]["description"]?.replace("\\n", System.getProperty("line.separator") as String)
+        viewHolder.tvDesc.text = dataSet[position]["desc"]?.replace("\\n", System.getProperty("line.separator") as String)
     }
 
     override fun getItemCount(): Int = dataSet.size

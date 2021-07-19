@@ -1,5 +1,6 @@
 package com.example.mywaiterapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -15,16 +16,14 @@ class AdvertList : AppCompatActivity() {
         val db = FirebaseFirestore.getInstance()
 //        FirebaseFirestore.setLoggingEnabled(true);
 
-
         adListRecyclerView.adapter = AdvertListAdapter(mutableListOf())
 
-        db.collection("events").get()
+        db.collection("adverts").get()
             .addOnSuccessListener { result ->
                 // да, я говнишка, и вложил мапу в лист, чтобы не париться
                 val dataSet: MutableList<MutableMap<String, String>> = arrayListOf()
                 for (advert in result) {
                     val data = advert.data
-                    // короче надо заменить id, тупа патаму чта лень менять в файерсторе, убери эту строку потом плез !!!!!!!!!!
                     data["id"] = advert.id
                     dataSet.add(data as MutableMap<String, String>)
                 }
@@ -36,5 +35,10 @@ class AdvertList : AppCompatActivity() {
                 adapter.notifyDataSetChanged()
                 Log.d("Barmaley", dataSet.toString())
             }
+
+        adListBtnNewAdvert.setOnClickListener {
+            val intent = Intent(this, NewAdvert::class.java)
+            startActivity(intent)
+        }
     }
 }
