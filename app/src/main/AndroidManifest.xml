@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyWaiterApp">
-        <activity android:name=".NewAdvert"></activity>
+        <activity android:name=".NewAdvert"/>
         <activity android:name=".AdvertList">
             <intent-filter> <!-- эту лабуду перемести потом обратно в регистрацию плез -->
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,9 @@
         </activity>
         <activity
             android:name=".Advert" />
-        <activity android:name=".Authorization" />
+        <activity android:name=".Authorization">
+
+        </activity>
         <activity android:name=".Registration"></activity>
         <activity android:name=".MainActivity" />
     </application>
