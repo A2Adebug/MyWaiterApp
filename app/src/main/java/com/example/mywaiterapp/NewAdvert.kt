@@ -15,7 +15,7 @@ class NewAdvert : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_advert)
 
-        val spinnerItems = arrayOf("Банкет")
+        val spinnerItems = arrayOf("Банкет", "Свадьба", "Бизнес встреча")
 
         val adapter = ArrayAdapter(this, R.layout.spinner_dropdown_item, spinnerItems)
         spinner.adapter = adapter
